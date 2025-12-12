@@ -1,0 +1,88 @@
+VỊ TRÍ: DATA SCIENTIST
+CÔNG TY: TechCorp Solutions
+ĐỊA ĐIỂM: TP. Hồ Chí Minh, Việt Nam
+LOẠI HÌNH: Full-time
+CẤP ĐỘ: Mid-level to Senior
+
+MÔ TẢ CÔNG VIỆC:
+Chúng tôi đang tìm kiếm một Data Scientist tài năng để tham gia vào đội ngũ AI/ML của chúng tôi. Bạn sẽ chịu trách nhiệm phát triển các mô hình machine learning, phân tích dữ liệu phức tạp và tạo ra các giải pháp AI sáng tạo để giải quyết các thách thức kinh doanh thực tế.
+
+TRÁCH NHIỆM CHÍNH:
+• Phát triển và triển khai các mô hình machine learning và deep learning
+• Phân tích dữ liệu lớn để khám phá insights và patterns
+• Thiết kế và thực hiện các thí nghiệm A/B testing
+• Xây dựng pipeline xử lý dữ liệu và feature engineering
+• Tối ưu hóa hiệu suất mô hình và monitoring
+• Hợp tác với các team khác để tích hợp AI solutions
+• Viết báo cáo kỹ thuật và trình bày kết quả cho stakeholders
+• Nghiên cứu và áp dụng các công nghệ AI/ML mới nhất
+
+YÊU CẦU KỸ NĂNG:
+
+Kỹ năng bắt buộc:
+• Thành thạo Python và các thư viện ML (scikit-learn, TensorFlow, PyTorch)
+• Kinh nghiệm với SQL và NoSQL databases
+• Kiến thức vững chắc về statistics và probability
+• Kinh nghiệm với data visualization (Matplotlib, Seaborn, Plotly)
+• Hiểu biết về machine learning algorithms (classification, regression, clustering)
+• Kinh nghiệm với big data tools (Spark, Hadoop)
+• Git version control và collaborative development
+
+Kỹ năng ưu tiên:
+• Kinh nghiệm với deep learning và neural networks
+• Kiến thức về NLP và computer vision
+• Kinh nghiệm với cloud platforms (AWS, GCP, Azure)
+• Kinh nghiệm với MLOps và model deployment
+• Kỹ năng communication và presentation
+• Kinh nghiệm làm việc với real-time data streams
+
+YÊU CẦU HỌC VẤN:
+• Bằng cử nhân trở lên về Computer Science, Statistics, Mathematics, hoặc lĩnh vực liên quan
+• Ưu tiên ứng viên có bằng thạc sĩ hoặc tiến sĩ về Data Science/AI
+
+KINH NGHIỆM:
+• 3-5 năm kinh nghiệm trong lĩnh vực Data Science hoặc Machine Learning
+• Có portfolio các dự án ML đã triển khai thành công
+• Kinh nghiệm làm việc trong môi trường startup hoặc công ty công nghệ
+
+DỰ ÁN MẪU (ƯU TIÊN):
+• Recommendation systems
+• Predictive analytics
+• Natural Language Processing
+• Computer Vision applications
+• Time series forecasting
+• Anomaly detection
+
+MÔI TRƯỜNG LÀM VIỆC:
+• Môi trường startup năng động, sáng tạo
+• Cơ hội học hỏi công nghệ mới nhất
+• Làm việc với dữ liệu thực tế từ nhiều nguồn khác nhau
+• Cơ hội thăng tiến và phát triển nghề nghiệp
+• Chế độ đãi ngộ cạnh tranh
+• Bảo hiểm sức khỏe và các phúc lợi khác
+
+QUY TRÌNH LÀM VIỆC:
+• Agile methodology
+• Code review và pair programming
+• Regular knowledge sharing sessions
+• Continuous learning và skill development
+
+LƯƠNG VÀ PHÚC LỢI:
+• Lương cạnh tranh theo năng lực
+• Thưởng dự án và performance bonus
+• Bảo hiểm sức khỏe toàn diện
+• Nghỉ phép có lương
+• Đào tạo và conference budget
+• Flexible working hours
+• Remote work options
+
+ỨNG TUYỂN:
+Vui lòng gửi CV và portfolio các dự án ML đã thực hiện. Chúng tôi sẽ liên hệ để sắp xếp phỏng vấn kỹ thuật và thảo luận chi tiết về vị trí này.
+
+LIÊN HỆ:
+Email: careers@techcorp.vn
+Website: www.techcorp.vn
+Địa chỉ: Tòa nhà TechCorp, Quận 1, TP. Hồ Chí Minh
+
+---
+*TechCorp Solutions - Đổi mới sáng tạo, Phát triển bền vững*

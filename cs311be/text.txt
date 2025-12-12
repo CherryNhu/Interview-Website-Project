@@ -1,0 +1,44 @@
+4.5.2. Luồng logic xử lý của hệ thống trợ lý
+Hệ thống Trợ lý được thiết kế nhằm hỗ trợ người khuyết tật trong việc tiếp cận thông tin hướng nghiệp, đào tạo, quyền lợi pháp lý và các nguồn hỗ trợ phù hợp với từng dạng khuyết tật. Để đảm bảo độ chính xác, an toàn và thân thiện trong tương tác, hệ thống vận hành theo luồng xử lý logic như sau:
+Bước 1: Tiếp nhận và tiền xử lý đầu vào;
+Khi người dùng nhập câu hỏi,  hệ thống sẽ thực hiện bước tiền xử lý bao gồm:
+     - Chuẩn hóa văn bản đầu vào (Pre-processing)
+     - Phân đoạn và kiểm tra cấu trúc câu hỏi
+Bước 2: Kiểm tra ngôn ngữ để phản hồi
+Trợ lý xác định ngôn ngữ người dùng đang sử dụng để phản hồi lại cho phù hợp, dễ hiểu cho người cần tư vấn. Hiện tại, Trợ lý ảo có thể hỗ trợ 2 ngôn ngữ chính:
+     - Tiếng Việt
+     - Tiếng Anh
+Bước 3: Kiểm tra miền hỗ trợ
+Hệ thống kiểm tra xem nội dung câu hỏi có thuộc các lĩnh vực hỗ trợ như:
+     - Hướng nghiệp cho người khuyết tật
+     - Cơ sở đào tạo chính sách giáo dịch 
+Bước 4: Phát hiện và hỗ trợ trò chuyện ngắn
+Nếu đầu vào là những mẫu câu xã giao như (“Chào bạn”, “Bạn khỏe không?”), hệ thống sẽ nhận diện và trả lời ngay theo các mẫu phản hồi được lập trình sẵn nhằm tạo cảm giác thân thiện, duy trì cuộc hội thoại tự nhiên.
+Bước 5: Phát hiện hành vi không an toàn hoặc tiêu cực
+Nhận diện các câu hỏi xâm nhập hệ thống hoặc mang từ ngữ xúc phạm, chỉ trích, không phù hợp và phản hồi lại một cách hợp lệ, thân thiện
+Bước 6: Kích hoạt tác nhân trí tuệ nhân tạo (AI Agent)
+Nếu đầu vào hợp lệ, hệ thống sẽ truyền thông tin đến AI Agent chính, đóng vai trò như một bộ sử lý trung tâm:
+     - Phân tích mục đích câu hỏi
+     - Xác định dạng dữ liệu cần truy xuất (kiến thức pháp luật, nghề nghiệp, học bổng, trung tâm đào tạo)
+     - Lập kế hoạch sử dụng các công cụ truy vấn thích hợp
+Bước 7: Lựa chọn công cụ truy vấn thích hợp
+Dựa trên phân tích câu hỏi, Agent sẽ chọn 1 hay nhiều công cụ phù hợp từ danh sách:
+     - Tool 1: CSDL văn bản Luật Người Khuyết Tật (dạng vector, RAG)
+     - Tool 2: CSDL hướng nghiệp cá nhân hóa theo loại khuyết tật
+     - Tool 3: Danh sách cơ sở đào tạo, học bổng, hỗ trợ xã hội
+     - Tool 4: Cơ sở dữ liệu hội thoại (FAQ) để phản hồi nhanh
+Agent sẽ gửi truy vấn đến các công cụ và thu thập kết quả liên quan
+Cuối cùng: Trả về phản hồi cho người dùng
+Đảm bảo đúng nội dung về thông tin, nguồn thông tin và trả lời một cách thân thiện, tự nhiên.
+4.5.3. Ví dụ minh hoạ trợ lý ảo
+Phản hồi các câu hỏi ngắn: Chatbot có thể tương tác tự nhiên với các câu hỏi đơn giản như “Xin chào”, “Tạm biệt”, “Bạn là ai?”, v.v.
+Hình 4.24 Minh họa tương tác trợ lý ảo tư vấn hướng nghiệp
+Xử lý các câu hỏi ngoài lĩnh vực chuyên môn: Có khả năng phản hồi linh hoạt các câu hỏi nằm ngoài phạm vi nội dung chính, giúp tăng trải nghiệm người dùng.
+Hình 4.25 Minh họa tương tác trợ lý ảo tư vấn hướng nghiệp
+Hỗ trợ đa ngôn ngữ: Ngoài tiếng Việt, chatbot có thể giao tiếp bằng tiếng Anh, phục vụ nhu cầu của người dùng đa ngôn ngữ.
+Hình 4.26 Minh họa tương tác trợ lý ảo tư vấn hướng nghiệp
+Tư vấn nghề nghiệp cá nhân hóa: Cung cấp gợi ý nghề nghiệp phù hợp dựa trên sổ tay việc làm, được phân loại theo từng dạng khuyết tật cụ thể, nhằm hỗ trợ người dùng tiếp cận công việc phù hợp.
+
+
+
+Hình 4.27 Minh họa tương tác trợ lý ảo tư vấn hướng nghiệp

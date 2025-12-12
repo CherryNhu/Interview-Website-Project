@@ -1,0 +1,175 @@
+STT,Câu hỏi,Trả lời
+1,"1. Kiểm thử API là gì, và tại sao nó quan trọng?","Kiểm thử API xác minh chức năng, hiệu suất và bảo mật của các giao diện lập trình ứng dụng (API) bằng cách gửi yêu cầu và xác thực phản hồi. Điều này rất quan trọng vì API cho phép giao tiếp giữa các hệ thống, và việc kiểm thử đảm bảo độ tin cậy và tính chính xác của sản phẩm phần mềm."
+2,2. API là gì và các loại API?,"Giao diện lập trình ứng dụng (API) rất hữu ích cho việc giao tiếp giữa các hệ thống phần mềm khác nhau. Nó hoạt động như một giao diện giữa hai ứng dụng và cho phép hai hệ thống phần mềm giao tiếp với nhau. API (Giao diện lập trình ứng dụng) cho phép các hệ thống phần mềm khác nhau giao tiếp với nhau.
+
+Web APIs: Một Web API (còn được gọi là Web Service) là một trong những loại API phổ biến nhất. Nó hoạt động qua internet và tuân theo các giao thức HTTP. Web APIs là mã nguồn mở, có nghĩa là chúng có thể được truy cập bởi nhiều thiết bị khách như điện thoại, máy tính bảng hoặc máy tính để trao đổi dữ liệu.
+
+Local APIs: Local APIs cho phép các ứng dụng trong cùng một hệ thống giao tiếp với nhau. Các nhà phát triển sử dụng chúng cho các dịch vụ middleware—phần mềm kết nối các ứng dụng khác nhau.
+
+Program APIs: Program APIs giúp một chương trình phần mềm tương tác với một chương trình khác, ngay cả khi chúng không nằm trên cùng một hệ thống. Chúng thường sử dụng các Remote Procedural Calls (RPCs) để làm cho một chương trình từ xa trông như đang chạy cục bộ."
+3,3. Sự khác biệt giữa REST và SOAP APIs là gì?,"REST: Nhẹ, sử dụng các phương thức HTTP (GET, POST), không trạng thái, và trả về JSON/XML.  
+SOAP: Dựa trên giao thức, sử dụng XML, và hỗ trợ các hoạt động phức tạp với WS-Security."
+4,5. Các loại kiểm thử API khác nhau là gì?,"Dưới đây là các loại kiểm thử API khác nhau:
+
+- **Kiểm thử chức năng (Functional Testing):** Kiểm tra xem API có hoạt động đúng theo yêu cầu hay không.
+- **Kiểm thử tải (Load Testing):** Kiểm tra cách API hoạt động dưới tải nặng hoặc nhiều yêu cầu đồng thời để đánh giá độ ổn định và khả năng phản hồi.
+- **Kiểm thử bảo mật (Security Testing):** Đảm bảo API được bảo vệ trước các mối đe dọa như truy cập trái phép, tấn công injection, và rò rỉ dữ liệu.
+- **Kiểm thử độ tin cậy (Reliability Testing):** Xác minh rằng API có thể xử lý các yêu cầu một cách ổn định theo thời gian mà không gặp lỗi.
+- **Kiểm thử xác thực (Validation Testing):** Xác nhận rằng API trả về kết quả như mong đợi và tuân thủ đúng định dạng dữ liệu cũng như các giao thức.
+- **Kiểm thử xử lý lỗi (Error Handling Testing):** Kiểm tra cách API phản hồi với các đầu vào không hợp lệ hoặc điều kiện bất ngờ, đảm bảo rằng nó xử lý lỗi một cách hợp lý.
+- **Kiểm thử khả năng tương tác (Interoperability Testing):** Đảm bảo API hoạt động tốt trên các thiết bị, nền tảng hoặc hệ thống khác nhau tương tác với nó.
+- **Kiểm thử tài liệu (Documentation Testing):** Xem xét tài liệu API để đảm bảo rằng nó chính xác, đầy đủ và dễ hiểu đối với các nhà phát triển."
+5,6. Vai trò của Postman trong kiểm thử API là gì?,"Postman là một công cụ để thiết kế, kiểm thử và tự động hóa các yêu cầu API. Nó cho phép gửi yêu cầu, xác thực phản hồi và viết kịch bản kiểm thử."
+6,7. Liệt kê sự khác biệt giữa API và Web Service.,Dưới đây là sự khác biệt giữa Web Services và Web API:
+7,8. Những giao thức nào có thể được kiểm tra bằng cách sử dụng Kiểm thử API?,"Kiểm thử API có thể được sử dụng để kiểm tra các giao thức khác nhau hỗ trợ giao tiếp giữa các hệ thống phần mềm. Một số giao thức thường được kiểm tra bao gồm:  
+HTTP/HTTPS: Được sử dụng cho các API RESTful, đảm bảo giao tiếp web an toàn và có cấu trúc.  
+SOAP (Simple Object Access Protocol): Một giao thức sử dụng tin nhắn dựa trên XML cho các dịch vụ web.  
+REST (Representational State Transfer): Một kiến trúc dịch vụ web được sử dụng rộng rãi qua HTTP.  
+GraphQL: Một ngôn ngữ truy vấn cho API cho phép truy xuất dữ liệu cụ thể một cách hiệu quả.  
+WebSockets: Dùng cho giao tiếp thời gian thực giữa máy khách và máy chủ."
+8,9. Hãy cho tôi biết Ưu điểm và Nhược điểm của kiểm thử API.,"Ưu điểm:  
+- Sửa lỗi nhanh hơn: Kiểm thử API hoạt động nhanh chóng để cung cấp giải pháp, do đó giúp chẩn đoán vấn đề sớm hơn trong quá trình phát triển hệ thống, cho phép phát hiện và loại bỏ lỗi hiệu quả.  
+- Giảm chi phí: Kiểm thử API cung cấp kết quả nhanh chóng, dễ bảo trì, do đó giảm chi phí kiểm thử.  
+- Hỗ trợ ngôn ngữ phổ biến: Kiểm thử API hỗ trợ nhiều ngôn ngữ khác nhau như JavaScript, Ruby, Python và PHP. Các định dạng như XML và JSON cũng được hỗ trợ trong quá trình kiểm thử API.  
+
+Nhược điểm:  
+- Kỹ năng kỹ thuật: Kiểm thử API yêu cầu người kiểm thử có kỹ năng và được đào tạo.  
+- Tốn thời gian: Kiểm thử API tốn thời gian vì cần thời gian để phát triển và thực thi các kịch bản kiểm thử cho API.  
+- Tài liệu hạn chế: Tài liệu hạn chế của API khiến người kiểm thử gặp khó khăn trong việc hiểu cách API nên phản hồi với một đầu vào cụ thể."
+9,10. Liệt kê sự khác biệt giữa Kiểm thử API và Kiểm thử đơn vị.,Dưới đây là sự khác biệt giữa kiểm thử API và kiểm thử đơn vị:
+10,11. Sự khác biệt giữa kiểm thử API chức năng và kiểm thử API phi chức năng là gì?,"Chức năng: Kiểm tra logic và hành vi của API (ví dụ: dữ liệu phản hồi chính xác).  
+Phi chức năng: Kiểm tra hiệu suất, bảo mật và khả năng mở rộng (ví dụ: thời gian phản hồi)."
+11,12. Điểm cuối (endpoint) trong kiểm thử API là gì?,"Một endpoint là một URL hoặc tuyến đường cụ thể trong API thực hiện một chức năng, chấp nhận các yêu cầu và trả về các phản hồi."
+12,"13. Xác thực trong kiểm thử API là gì, mục đích của nó và các phương pháp phổ biến?","Xác thực xác minh danh tính của người dùng hoặc hệ thống để truy cập các tài nguyên API được bảo vệ, đảm bảo an ninh và ngăn chặn truy cập trái phép. Mục đích của nó là bảo vệ dữ liệu nhạy cảm và thực thi kiểm soát truy cập. Các phương pháp phổ biến bao gồm:  
+- API Keys: Khóa đơn giản trong headers (ví dụ: X-API-Key: abc123).  
+- OAuth: Ủy quyền dựa trên token (ví dụ: OAuth 2.0 để ủy quyền người dùng).  
+- JWT: JSON Web Tokens để truy cập an toàn, không trạng thái.  
+- Basic Auth: Tên người dùng:mật khẩu được mã hóa Base64 trong headers."
+13,"14. Trường hợp kiểm thử cho kiểm thử API là gì, và nó bao gồm những gì?","Một trường hợp kiểm thử mô tả các bước để xác thực một API, bao gồm: ID kiểm thử, mô tả, endpoint, phương thức, dữ liệu yêu cầu, phản hồi mong đợi và mã trạng thái."
+14,15. Sự khác biệt giữa yêu cầu GET và POST là gì?,"GET: Truy xuất dữ liệu, idempotent, tham số trong URL.  
+POST: Tạo dữ liệu, không idempotent, dữ liệu trong phần thân yêu cầu."
+15,16. Mục đích của các header trong yêu cầu API là gì?,"Các header cung cấp siêu dữ liệu về yêu cầu/phản hồi, chẳng hạn như loại nội dung, ủy quyền hoặc hướng dẫn lưu trữ."
+16,17. API giả lập là gì và khi nào nó được sử dụng?,"Một API giả lập mô phỏng hành vi của API thực để kiểm thử khi API thực không khả dụng, sử dụng các công cụ như WireMock hoặc Mockoon."
+17,18. Kiểm thử tiêu cực trong ngữ cảnh của API là gì?,"Kiểm thử tiêu cực xác nhận hành vi của API với các đầu vào không hợp lệ, chẳng hạn như dữ liệu sai hoặc yêu cầu không được phép, để đảm bảo xử lý lỗi đúng cách."
+18,19. Mục đích của xác thực trong kiểm thử API là gì?,"Xác thực API là sự kết hợp giữa công nghệ hoặc quy trình nhằm xác minh danh tính của người dùng muốn truy cập vào một API. Nó bao gồm việc sử dụng giao thức phần mềm để xác minh danh tính của người yêu cầu trước khi cấp quyền truy cập vào các tài nguyên được bảo vệ. Xác thực kiểm tra danh tính của người dùng hoặc hệ thống. Các phương pháp phổ biến bao gồm API keys, OAuth, JWT (JSON Web Tokens), và Basic Auth."
+19,20. Tham số truy vấn trong kiểm thử API là gì?,"Các tham số truy vấn là các cặp khóa-giá trị trong URL để lọc hoặc chỉnh sửa một yêu cầu, được thêm vào sau dấu ?."
+20,21. API mocking là gì và tại sao được sử dụng?,"API mocking là thực hành mô phỏng hành vi của một endpoint API trong quá trình kiểm thử mà không thực sự gọi đến API thật. Điều này mang lại lợi ích trong giai đoạn phát triển.  
+
+**Request Headers**: Cung cấp siêu dữ liệu về yêu cầu, chẳng hạn như xác thực (Authorization), loại nội dung (Content-Type), và kiểm soát bộ nhớ đệm.  
+**Response Headers**: Chứa siêu dữ liệu về phản hồi từ máy chủ, bao gồm thông tin trạng thái, loại nội dung, và chính sách bảo mật.  
+
+Dưới đây là các lý do tại sao API mocking được sử dụng:  
+- Mock APIs hữu ích khi các ứng dụng có sự phụ thuộc vào các API bên ngoài.  
+- Mock APIs hữu ích cho các tester trong việc lập kế hoạch và xác nhận các kịch bản kiểm thử, cũng như cho các nhà phát triển thực hiện kiểm thử đơn vị và xác định các giai đoạn phát triển ban đầu.  
+- Mock APIs hữu ích trong các tình huống mà toàn bộ API cần được cung cấp để kiểm thử người dùng trước khi cam kết vào giai đoạn phát triển."
+21,22. Mục đích của mã trạng thái HTTP trong kiểm thử API là gì?,"Mã trạng thái HTTP cho biết kết quả của một yêu cầu API, giúp người kiểm thử hiểu liệu yêu cầu có thành công, thất bại hay cần hành động. 
+
+Chỉ báo trạng thái phản hồi: Cho biết yêu cầu có thành công (200 OK), thất bại (400 Bad Request) hay cần xác thực (401 Unauthorized).  
+Hỗ trợ gỡ lỗi: Giúp xác định các vấn đề như lỗi máy chủ (500 Internal Server Error).  
+Cải thiện giao tiếp API: Đảm bảo giao tiếp rõ ràng giữa client và server.  
+Nâng cao kiểm thử tự động: Được sử dụng trong các xác nhận kiểm thử để kiểm tra hành vi API mong đợi."
+22,23. Mục đích của phần thân yêu cầu và phản hồi trong kiểm thử API là gì?,"Phần thân yêu cầu (request body) được sử dụng để gửi và nhận dữ liệu như các tham số đầu vào, hoặc dữ liệu để tạo/cập nhật tài nguyên thông qua REST API. Phần thân phản hồi (response body) là dữ liệu mà API gửi về cho phía khách hàng.  
+
+**Phần thân yêu cầu (Request Body):** Chứa dữ liệu được gửi từ khách hàng đến API (ví dụ: thông tin đăng nhập người dùng, dữ liệu biểu mẫu, payload JSON).  
+Ví dụ: Gửi thông tin chi tiết người dùng trong một yêu cầu POST.  
+
+**Phần thân phản hồi (Response Body):** Chứa dữ liệu được API trả về, như thông báo thành công, chi tiết lỗi, hoặc thông tin được yêu cầu.  
+Ví dụ: Trả về thông tin chi tiết hồ sơ người dùng trong một yêu cầu GET."
+23,"24. Kiểm tra bảo mật API là gì, và tại sao nó quan trọng?","Kiểm tra bảo mật API là quy trình kiểm tra các lỗ hổng trong API. Điều này được thực hiện thông qua kiểm tra xâm nhập hoặc quét thủ công các API. Kiểm tra bảo mật API rất quan trọng: Các ứng dụng dựa trên đám mây phụ thuộc vào API để trao đổi dữ liệu và tương tác với nhau. Bất kỳ lỗ hổng bảo mật nào cũng có thể gây ra hậu quả nghiêm trọng. Các hoạt động trực tuyến và doanh nghiệp dựa vào API để tích hợp các hệ thống và dịch vụ khác nhau. Điều này dẫn đến các rủi ro bảo mật tiềm ẩn. Các tổ chức dựa vào các giải pháp bảo mật được thiết kế cho ứng dụng web để phát hiện và bảo vệ khỏi các mối đe dọa API. Tuy nhiên, các giải pháp này không thể phát hiện các lỗ hổng và khoảng trống độc đáo trong API."
+24,25. Phân tích Giá trị Biên (Boundary Value Analysis - BVA) trong kiểm thử API là gì?,Các kiểm thử BVA kiểm tra các trường hợp biên của phạm vi đầu vào (ví dụ: giá trị nhỏ nhất/lớn nhất) để tìm lỗi tại các ranh giới.
+25,"26. Phiên bản hóa API là gì, và tại sao nó quan trọng trong kiểm thử API?",Phiên bản hóa API bao gồm việc chỉ định một số phiên bản trong điểm cuối API hoặc tiêu đề để đảm bảo tính tương thích ngược. Nó quản lý các thay đổi trong API theo thời gian. Nó đảm bảo rằng phiên bản chính xác của API đang được kiểm tra. Nó đảm bảo rằng các thay đổi trong API không làm hỏng các ứng dụng khách hiện có.
+26,27. Những công cụ nào có thể được sử dụng để kiểm thử API?,"Katalon: Đây là công cụ dễ sử dụng hỗ trợ các yêu cầu REST, SOAP và chứng chỉ SSL client. Nó cũng cho phép nhập các bài kiểm tra từ Swagger, Postman, WADL và WSDL.  
+JMeter: Apache JMeter là một ứng dụng mã nguồn mở, 100% Java được tạo ra để kiểm thử hiệu năng. Công cụ này cho phép làm việc tự động với các tệp CSV.  
+REST-assured: REST-assured là ngôn ngữ miền cụ thể Java mã nguồn mở cho phép kiểm thử các dịch vụ REST. Nó hỗ trợ các yêu cầu POST, GET, PUT, DELETE, PATCH và HEAD.  
+SoapUI: SoapUI là công cụ kiểm thử tự động cho các API Soap và REST. Đây là công cụ mã nguồn mở cho phép tạo các bài kiểm tra một cách dễ dàng bằng cách kéo thả, nhấp và chọn.  
+Postman: Postman là một ứng dụng được sử dụng để kiểm thử API. Đây là một nền tảng độc lập được sử dụng để xây dựng, kiểm thử, thiết kế, chỉnh sửa và tài liệu hóa API."
+27,"28. Khi viết tài liệu API, cần phải cân nhắc điều gì?","Những Lưu Ý Quan Trọng Khi Viết Tài Liệu API
+
+Tổng Quan Rõ Ràng Về API: Giải thích mục đích, tính năng và các trường hợp sử dụng của API.  
+Chi Tiết Endpoint: Liệt kê tất cả các endpoint (GET /users, POST /orders) kèm theo mô tả.  
+Định Dạng Yêu Cầu & Phản Hồi: Cung cấp ví dụ JSON/XML với các tham số mong đợi.  
+Xác Thực & Bảo Mật: Giải thích cách sử dụng API keys, OAuth, hoặc JWT để truy cập.  
+Xử Lý Lỗi: Tài liệu mã trạng thái (400 Bad Request, 500 Internal Server Error) và các phản hồi.  
+Giới Hạn Tốc Độ & Điều Tiết: Định nghĩa giới hạn yêu cầu và cách xử lý mã 429 Too Many Requests."
+28,29: Làm thế nào để kiểm thử các API GraphQL so với các API REST?,"Kiểm tra GraphQL: Tập trung vào các truy vấn, mutations, và xác thực schema. Sử dụng các công cụ như Postman hoặc Apollo Client để gửi truy vấn (ví dụ: { user(id: 1) { name } }) và xác minh cấu trúc phản hồi. Kiểm tra tình trạng lấy dữ liệu quá mức hoặc thiếu dữ liệu và tuân thủ schema.  
+Kiểm tra REST: Kiểm tra các điểm cuối cố định (ví dụ: GET /users/1) với các phản hồi dự đoán được. Tập trung vào các phương thức HTTP và mã trạng thái."
+29,30. Làm thế nào để bạn đảm bảo tính bảo mật của các API trong các bài kiểm tra của mình?,"Để bảo vệ API trong quá trình kiểm thử, hãy tuân theo các thực hành tốt nhất sau:  
+
+- **Xác thực & Phân quyền**: Xác minh các cơ chế bảo mật như: OAuth 2.0, JWT (JSON Web Token), API Keys, Basic Auth.  
+- **Kiểm tra và Làm sạch Dữ liệu Đầu vào**: Ngăn chặn các cuộc tấn công SQL Injection và XSS bằng cách xác thực dữ liệu đầu vào.  
+- **Tiêu đề Bảo mật & Mã hóa**: Sử dụng HTTPS (TLS/SSL) và thiết lập các tiêu đề bảo mật như: Strict-Transport-Security, Content-Security-Policy.  
+- **Giới hạn Tốc độ & Điều chỉnh**: Ngăn chặn các cuộc tấn công DDoS bằng cách giới hạn tỷ lệ yêu cầu API.  
+- **Cơ chế Hết hạn & Làm mới Token**: Đảm bảo JWT hết hạn và triển khai token làm mới một cách an toàn.  
+- **Kiểm soát Truy cập (RBAC)**: Hạn chế quyền truy cập API dựa trên vai trò và quyền hạn của người dùng.  
+- **Ghi nhật ký & Giám sát**: Theo dõi hoạt động API bằng các công cụ ghi nhật ký để phát hiện bất thường.  
+- **Kiểm thử Bảo mật Tự động**: Sử dụng các công cụ như OWASP ZAP, Postman Security Tests, Burp Suite để xác định lỗ hổng bảo mật."
+30,31. Các loại phản hồi lỗi khác nhau trong kiểm thử API là gì?,"Các phản hồi lỗi trong kiểm thử API được phân loại bằng mã trạng thái HTTP để chỉ ra các loại lỗi khác nhau. Dưới đây là các loại lỗi:
+
+Lỗi xác thực: Lỗi xác thực xảy ra khi yêu cầu API không đáp ứng các tiêu chí xác thực được định nghĩa bởi API.
+
+Mã trạng thái lỗi HTTP: Đây có thể là mã trạng thái phía client hoặc mã trạng thái phía server. Có các mã trạng thái HTTP tiêu chuẩn như 4xx hoặc 5xx chỉ ra lỗi trong yêu cầu hoặc phản hồi API.
+
+Thông báo lỗi tùy chỉnh: Đây là các thông báo lỗi tùy chỉnh được API trả về trong trường hợp xảy ra lỗi hoặc ngoại lệ."
+31,32. Làm thế nào bạn xử lý các phản hồi lỗi trong các bài kiểm tra API của mình?,"Xử lý Phản hồi Lỗi trong Kiểm thử API:  
+Xác thực Mã Trạng thái HTTP: Đảm bảo trả về đúng mã 4xx (lỗi phía khách hàng) và 5xx (lỗi phía máy chủ).  
+Kiểm tra Thông báo Lỗi: Xác minh thông báo lỗi có ý nghĩa, thân thiện với người dùng.  
+Kiểm tra Các Trường hợp Biên: Gửi đầu vào không hợp lệ, thiếu tham số và yêu cầu sai định dạng.  
+Triển khai Cơ chế Thử lại: Thử lại các yêu cầu đối với các lỗi tạm thời (lỗi 5xx).  
+Giám sát & Ghi nhật ký Lỗi: Sử dụng các công cụ như Postman, JMeter để theo dõi lỗi.  
+Tuân thủ Giới hạn Tần suất (429): Triển khai độ trễ hoặc tuân theo các tiêu đề Retry-After.  
+Xử lý Lỗi Bảo mật: Đảm bảo không rò rỉ dữ liệu nhạy cảm trong phản hồi lỗi."
+32,33. Kiểm tra đầu vào là gì?,"Xác thực đầu vào là quá trình kiểm tra dữ liệu người dùng để đảm bảo rằng nó chính xác, an toàn và đáp ứng các tiêu chí mong đợi trước khi xử lý. Quá trình này giúp ngăn ngừa lỗi, hỏng dữ liệu và các lỗ hổng bảo mật như tấn công SQL Injection và XSS. Xác thực đầu vào có thể được thực hiện ở cả phía client và phía server để tăng cường bảo mật và tính toàn vẹn của dữ liệu."
+33,34. Tại sao việc xác thực đầu vào lại quan trọng trong kiểm thử API?,Xác thực đầu vào rất quan trọng trong kiểm thử API vì nó ngăn chặn dữ liệu độc hại xâm nhập vào hệ thống. Việc này giúp ngăn chặn các cuộc tấn công chèn mã và các hoạt động độc hại khác. Điều này có thể được thực hiện thủ công hoặc sử dụng các công cụ tự động.
+34,35. Tấn công giả mạo yêu cầu từ trang chéo (CSRF) là gì?,Tấn công giả mạo yêu cầu liên trang (Cross-site request forgery) là một kiểu tấn công buộc người dùng thực hiện các hành động không mong muốn trên ứng dụng web mà họ đã được cấp quyền thực hiện. Kiểu tấn công này lợi dụng sự tin tưởng của ứng dụng web đối với một người dùng đã xác thực.
+35,36. Làm thế nào để ngăn chặn CSRF trong kiểm thử API?,"Token CSRF: CSRF có thể được ngăn chặn bằng cách sử dụng token CSRF. Đây là các token ngẫu nhiên cần phải duy nhất cho mỗi phiên người dùng và nên có giá trị ngẫu nhiên lớn để khó đoán.  
+Cookie SameSite: SameSite là một cơ chế bảo mật của trình duyệt xác định khi nào cookie của một trang web được bao gồm trong các yêu cầu xuất phát từ các trang web khác.  
+Xác thực dựa trên Referer: Header HTTP referer có thể được sử dụng để bảo vệ chống lại các cuộc tấn công CSRF bằng cách xác minh yêu cầu xuất phát từ chính miền của ứng dụng."
+36,37. Kiểm thử hợp đồng API là gì?,"Kiểm thử hợp đồng API là một loại kiểm thử nhằm giám sát cuộc trao đổi API diễn ra giữa người tiêu dùng API và nhà sản xuất API. Nó có thể được thực hiện bằng các công cụ như Postman, Swagger, v.v."
+37,38. Tại sao kiểm thử hợp đồng API lại quan trọng?,"Kiểm tra hợp đồng API đảm bảo rằng các API tuân theo một cấu trúc được định nghĩa (hợp đồng) giữa máy khách và máy chủ, ngăn chặn các thay đổi phá vỡ.  
+Đảm bảo Tính Nhất Quán: Xác minh phản hồi API khớp với định dạng mong đợi (JSON, XML).  
+Phát hiện Các Thay Đổi Phá Vỡ: Ngăn chặn các vấn đề khi cập nhật API.  
+Cải thiện Độ Tin Cậy: Đảm bảo khả năng tương thích ngược giữa các dịch vụ.  
+Tăng Tốc Phát Triển: Cho phép các nhóm frontend và backend làm việc độc lập.  
+Nâng Cao Độ Ổn Định API: Giảm thiểu lỗi trong tích hợp bằng cách áp dụng các tiêu chuẩn."
+38,39. Kiểm tra hiệu suất API là gì?,"Kiểm tra hiệu suất API đánh giá tốc độ, khả năng mở rộng và độ tin cậy của API dưới các tải và điều kiện khác nhau. Nó đảm bảo rằng API phản hồi hiệu quả và duy trì ổn định dưới các mức lưu lượng thay đổi. Thời gian phản hồi: Đo lường tốc độ API phản hồi. Lưu lượng xử lý: Kiểm tra số lượng yêu cầu được xử lý mỗi giây. Kiểm tra tải: Mô phỏng lưu lượng người dùng cao để kiểm tra hiệu suất. Kiểm tra áp lực: Xác định hành vi của API dưới các điều kiện cực đoan. Kiểm tra đột biến: Đánh giá phản hồi của API đối với các đợt tăng lưu lượng đột ngột."
+39,40. Tại sao kiểm tra hiệu suất API lại quan trọng?,"Kiểm tra hiệu suất API đảm bảo rằng API nhanh, có khả năng mở rộng và đáng tin cậy dưới các tải công việc khác nhau. Kiểm tra hiệu suất API giúp cải thiện hiệu suất và độ ổn định tổng thể của API. Nó cung cấp cái nhìn sâu sắc về hiệu suất tổng thể của API, từ đó giúp xác định các điểm mạnh và điểm yếu. Nó giúp xác định các vấn đề về hiệu suất và đánh giá tác động của các thay đổi. Nó giúp đảm bảo rằng API linh hoạt và có thể đáp ứng các yêu cầu của thế giới thực."
+40,41. Giám sát API là gì?,"Giám sát API là quá trình theo dõi liên tục tính khả dụng, hiệu suất và chức năng của API để phát hiện các vấn đề trong thời gian thực.  
+Thời gian hoạt động & Ngừng hoạt động: Đảm bảo API luôn sẵn sàng truy cập.  
+Thời gian phản hồi: Theo dõi tốc độ và độ trễ của API.  
+Tỷ lệ lỗi: Phát hiện các yêu cầu thất bại hoặc phản hồi không mong muốn.  
+Lưu lượng & Tải: Giám sát các mô hình sử dụng API.  
+Mối đe dọa bảo mật: Xác định các lỗ hổng tiềm ẩn."
+41,42. Tại sao việc giám sát API lại quan trọng?,"Giám sát API đảm bảo rằng các API luôn đáng tin cậy, nhanh chóng và an toàn bằng cách theo dõi hiệu suất của chúng trong thời gian thực. Nó cung cấp các phép đo về thời gian thực hiện một quy trình, tần suất được gọi và tổng thời gian được sử dụng để thực hiện giao dịch. Việc đảm bảo tính khả dụng, hiệu suất và bảo mật của các API là rất quan trọng. Điều này giúp đảm bảo trải nghiệm người dùng đáng tin cậy và hiệu quả. Nó cũng giúp theo dõi tính khả dụng của các API quan trọng."
+42,43. API virtualization là gì?,"Ảo hóa API là quá trình sử dụng một công cụ để tạo ra một bản sao ảo của API, phản ánh tất cả các thông số kỹ thuật của API sản xuất và sử dụng bản sao ảo này để kiểm thử. Cho phép kiểm thử sớm trước khi API thực tế được xây dựng. Giảm sự phụ thuộc vào hệ thống trực tiếp bằng cách mô phỏng các API không khả dụng. Cải thiện tốc độ phát triển bằng cách cho phép các nhóm làm việc song song. Hỗ trợ kiểm thử hiệu năng trong các điều kiện khác nhau."
+43,44. Tại sao ảo hóa API được sử dụng trong kiểm thử API?,"Nó được sử dụng trong kiểm thử API vì cho phép kiểm thử sớm hơn trong quá trình phát triển, loại bỏ các điểm nghẽn chính mà nếu không sẽ làm chậm quá trình sản xuất. Nó hữu ích để cô lập các phụ thuộc, mô phỏng phản hồi và đảm bảo hành vi nhất quán."
+44,45. Mục đích của tài liệu API trong kiểm thử API là gì?,"Tài liệu API là một tài liệu kỹ thuật mô tả chi tiết về API. Nó bao gồm hướng dẫn về cách sử dụng và tích hợp API một cách hiệu quả, đồng thời cung cấp các cập nhật liên quan đến vòng đời của API như các phiên bản mới. Đây là nguồn tài nguyên chính giải thích những gì có thể thực hiện với API và cách bắt đầu sử dụng API."
+45,46. Làm thế nào để bạn ưu tiên các trường hợp kiểm thử API cho kiểm thử hồi quy?,"Chức năng quan trọng trước tiên: Tập trung vào các API cốt lõi ảnh hưởng đến hoạt động kinh doanh.  
+Các API được sử dụng thường xuyên: Kiểm tra các API mà người dùng truy cập nhiều nhất.  
+Các API mới thay đổi hoặc cập nhật gần đây: Ưu tiên các API được chỉnh sửa trong các bản cập nhật gần đây.  
+Các API có lịch sử lỗi cao: Kiểm tra lại các API trước đây đã có lỗi.  
+Các API bảo mật và xác thực: Đảm bảo không có lỗ hổng nào được đưa vào.  
+Các API quan trọng về hiệu suất: Xác minh các API ảnh hưởng đến tốc độ và khả năng mở rộng của hệ thống.  
+Các API phụ thuộc: Kiểm tra các API tương tác với nhiều dịch vụ hoặc thành phần."
+46,47. Làm thế nào để xử lý phiên bản hóa trong kiểm thử API?,"Kiểm tra Nhiều Phiên Bản: Đảm bảo khả năng tương thích ngược bằng cách kiểm tra các phiên bản API cũ và mới.  
+Sử dụng Điểm Kết Cụ Thể Theo Phiên Bản: Xác thực các lệnh gọi API với các URL theo phiên bản (ví dụ: /v1/users so với /v2/users).  
+Kiểm tra Phiên Bản Dựa Trên Header: Xác minh phản hồi API khi phiên bản được quản lý qua header (Accept: application/vnd.api.v2+json).  
+So sánh Phản Hồi: Đảm bảo tính nhất quán giữa các phiên bản khác nhau trong khi kiểm tra các cải tiến.  
+Xác thực Các Tính Năng Bị Loại Bỏ: Kiểm tra xử lý lỗi đối với các chức năng đã bị loại bỏ hoặc cập nhật.  
+Tự động hóa Kiểm Tra Theo Phiên Bản: Duy trì các bộ kiểm tra riêng biệt cho từng phiên bản API."
+47,49. Những lỗi khác nhau nào có thể được tìm thấy trong kiểm thử API?,Các lỗi khác nhau được phát hiện trong kiểm thử API: Chức năng trùng lặp hoặc thiếu. Thông báo không đúng. Vấn đề đa luồng. Vấn đề bảo mật và hiệu suất. Vấn đề độ tin cậy.
+48,50. Có thể hack API trong khi kiểm thử không?,"Vâng, có thể hack API trong quá trình kiểm thử vì các yêu cầu được gửi qua internet, chủ yếu tuân theo giao thức HTTP, một giao thức dựa trên văn bản. Do đó, việc thực hiện kiểm thử bảo mật cho API là rất quan trọng để đảm bảo hệ thống an toàn hơn. Các lỗ hổng API thường bị khai thác: 
+
+- Xác thực bị phá vỡ: Token yếu hoặc thiếu xác thực.  
+- SQL Injection: Các truy vấn độc hại để truy cập hoặc sửa đổi cơ sở dữ liệu.  
+- Cross-Site Scripting (XSS): Tiêm mã script vào phản hồi API.  
+- Điểm cuối không an toàn: Dữ liệu nhạy cảm bị lộ do kiểm soát truy cập không đúng cách.  
+- Bỏ qua giới hạn tốc độ: Khai thác API bằng cách gửi lượng yêu cầu quá mức."
+49,51. Làm thế nào để thực hiện kiểm tra tải API?,Kiểm tra tải API là một loại kiểm tra hiệu năng được thực hiện để kiểm tra khả năng của ứng dụng hoạt động dưới các tải người dùng khác nhau. Nó được thực hiện bằng cách mô phỏng nhiều người dùng truy cập API cùng một lúc để xác định xem ứng dụng có khả năng xử lý tải bằng cách duy trì sự nhất quán trong thời gian phản hồi và không ảnh hưởng đến chức năng hay không.
+50,52. Môi trường kiểm thử của API là gì?,"Môi trường kiểm thử API là một thiết lập nơi các API được kiểm thử trong điều kiện kiểm soát trước khi triển khai. Nó bao gồm:  
+
+- Máy chủ & Cơ sở dữ liệu: Một máy chủ kiểm thử và cơ sở dữ liệu chuyên dụng để mô phỏng môi trường sản xuất.  
+- Điểm cuối API: Các URL staging hoặc sandbox tách biệt khỏi hệ thống hoạt động trực tiếp.  
+- Cấu hình Xác thực & Bảo mật: Các khóa API, OAuth, token JWT để kiểm soát truy cập.  
+- Dịch vụ giả lập & Ảo hóa: Các phụ thuộc được mô phỏng để kiểm thử API một cách độc lập.  
+- Công cụ kiểm thử: Các công cụ như Postman, JMeter, SoapUI để tự động hóa và kiểm thử hiệu năng.  
+- Ghi nhật ký & Giám sát: Theo dõi các yêu cầu, phản hồi và lỗi của API."

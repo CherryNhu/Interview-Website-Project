@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MockInterview Tester</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; margin: 20px; color: #111827; }
+      .container { max-width: 980px; margin: 0 auto; }
+      .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+      .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+      .col { flex: 1 1 300px; }
+      label { font-weight: 600; display: block; margin-bottom: 6px; }
+      input[type="text"], textarea { width: 100%; padding: 10px 12px; border: 1px solid #e5e7eb; border-radius: 8px; font-size: 14px; }
+      textarea { min-height: 120px; }
+      input[type="file"] { font-size: 14px; }
+      button { background: #2563eb; color: #fff; border: none; border-radius: 8px; padding: 10px 14px; cursor: pointer; font-weight: 600; }
+      button:disabled { opacity: .6; cursor: not-allowed; }
+      .muted { color: #6b7280; font-size: 13px; }
+      .chat { height: 300px; overflow: auto; border: 1px solid #e5e7eb; border-radius: 10px; padding: 12px; background: #f9fafb; }
+      .msg { margin: 8px 0; padding: 10px 12px; border-radius: 10px; max-width: 75%; }
+      .msg.user { margin-left: auto; background: #2563eb; color: #fff; }
+      .msg.bot { margin-right: auto; background: #fff; border: 1px solid #e5e7eb; }
+      .status { font-size: 13px; margin-left: 8px; }
+      .ok { color: #059669; }
+      .err { color: #dc2626; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script>
+      const { useEffect, useMemo, useRef, useState } = React;
+
+      function App() {
+        const [baseUrl, setBaseUrl] = useState('http://localhost:3005');
+        const [roomId, setRoomId] = useState(() => (crypto && crypto.randomUUID ? crypto.randomUUID() : Math.random().toString(36).slice(2)));
+        const [cvFile, setCvFile] = useState(null);
+        const [jdText, setJdText] = useState('');
+        const [input, setInput] = useState('');
+        const [messages, setMessages] = useState([]);
+        const [busy, setBusy] = useState(false);
+        const [cvOk, setCvOk] = useState(false);
+        const [jdOk, setJdOk] = useState(false);
+
+        const chatEndRef = useRef(null);
+        useEffect(() => { chatEndRef.current?.scrollIntoView({ behavior: 'smooth' }); }, [messages]);
+
+        async function uploadCv() {
+          if (!cvFile) return;
+          setBusy(true); setCvOk(false);
+          try {
+            const form = new FormData();
+            form.append('file', cvFile);
+            form.append('session_id', roomId);
+            const res = await fetch(baseUrl.replace(/\/$/, '') + '/chat/extract-cv/', { method: 'POST', body: form });
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            await res.json();
+            setCvOk(true);
+          } catch (e) {
+            alert('Upload CV failed: ' + e);
+          } finally { setBusy(false); }
+        }
+
+        async function extractJd() {
+          if (!jdText.trim()) return;
+          setBusy(true); setJdOk(false);
+          try {
+            const body = new URLSearchParams();
+            body.append('job_description', jdText);
+            body.append('session_id', roomId);
+            const res = await fetch(baseUrl.replace(/\/$/, '') + '/chat/extract-job/', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
+              body
+            });
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            await res.json();
+            setJdOk(true);
+          } catch (e) {
+            alert('Extract JD failed: ' + e);
+          } finally { setBusy(false); }
+        }
+
+        async function sendMessage() {
+          const text = input.trim();
+          if (!text) return;
+          const userMsg = { id: Date.now(), role: 'user', content: text };
+          setMessages((prev) => [...prev, userMsg]);
+          setInput('');
+          setBusy(true);
+          try {
+            const res = await fetch(baseUrl.replace(/\/$/, '') + '/chat/chatDomain', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ room_id: roomId, query: text })
+            });
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            const data = await res.json();
+            const botMsg = { id: Date.now() + 1, role: 'agent', content: data.response || '' };
+            setMessages((prev) => [...prev, botMsg]);
+          } catch (e) {
+            const errMsg = { id: Date.now() + 2, role: 'agent', content: '❌ Error: ' + e };
+            setMessages((prev) => [...prev, errMsg]);
+          } finally { setBusy(false); }
+        }
+
+        async function downloadReport() {
+          setBusy(true);
+          try {
+            const res = await fetch(baseUrl.replace(/\/$/, '') + '/chat/final-report/' + encodeURIComponent(roomId));
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            const payload = await res.json();
+            const b64 = payload.data_base64 || '';
+            const filename = payload.filename || ('interview_report_' + roomId + '.pdf');
+            const link = document.createElement('a');
+            link.href = 'data:application/pdf;base64,' + b64;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+          } catch (e) {
+            alert('Download report failed: ' + e);
+          } finally { setBusy(false); }
+        }
+
+        return (
+          React.createElement('div', { className: 'container' },
+            React.createElement('div', { className: 'card' },
+              React.createElement('h2', null, 'MockInterview Tester'),
+              React.createElement('p', { className: 'muted' }, 'Test the chatbot_mi backend without Node. Keep the FastAPI server running on port 3005.'),
+              React.createElement('div', { className: 'row' },
+                React.createElement('div', { className: 'col' },
+                  React.createElement('label', null, 'Backend URL'),
+                  React.createElement('input', { type: 'text', value: baseUrl, onChange: (e) => setBaseUrl(e.target.value) })
+                ),
+                React.createElement('div', { className: 'col' },
+                  React.createElement('label', null, 'Room ID'),
+                  React.createElement('input', { type: 'text', value: roomId, onChange: (e) => setRoomId(e.target.value) })
+                )
+              )
+            ),
+
+            React.createElement('div', { className: 'card' },
+              React.createElement('h3', null, '1) Upload CV (PDF/DOCX)'),
+              React.createElement('div', { className: 'row' },
+                React.createElement('input', { type: 'file', accept: '.pdf,.doc,.docx', onChange: (e) => setCvFile(e.target.files?.[0] || null) }),
+                React.createElement('button', { onClick: uploadCv, disabled: busy || !cvFile }, 'Extract CV'),
+                cvOk ? React.createElement('span', { className: 'status ok' }, '✔ CV stored') : null
+              )
+            ),
+
+            React.createElement('div', { className: 'card' },
+              React.createElement('h3', null, '2) Paste Job Description'),
+              React.createElement('textarea', { value: jdText, onChange: (e) => setJdText(e.target.value), placeholder: 'Paste job description here...' }),
+              React.createElement('div', { className: 'row', style: { marginTop: '8px' } },
+                React.createElement('button', { onClick: extractJd, disabled: busy || !jdText.trim() }, 'Extract JD'),
+                jdOk ? React.createElement('span', { className: 'status ok' }, '✔ JD stored') : null
+              )
+            ),
+
+            React.createElement('div', { className: 'card' },
+              React.createElement('h3', null, '3) Chat'),
+              React.createElement('div', { className: 'chat' },
+                messages.map(m => React.createElement('div', { key: m.id, className: 'msg ' + (m.role === 'user' ? 'user' : 'bot') }, m.content)),
+                React.createElement('div', { ref: chatEndRef })
+              ),
+              React.createElement('div', { className: 'row', style: { marginTop: '8px' } },
+                React.createElement('input', { className: 'col', type: 'text', placeholder: 'Type message...', value: input, onChange: (e) => setInput(e.target.value) }),
+                React.createElement('button', { onClick: sendMessage, disabled: busy || !input.trim() }, 'Send')
+              )
+            ),
+
+            React.createElement('div', { className: 'card' },
+              React.createElement('h3', null, '4) Final Report (PDF)'),
+              React.createElement('button', { onClick: downloadReport, disabled: busy }, 'Download Report')
+            )
+          )
+        );
+      }
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(React.createElement(App));
+    </script>
+  </body>
+  </html>
+
+

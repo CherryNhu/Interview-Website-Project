@@ -1,0 +1,413 @@
+1. How does artificial intelligence differ from traditional programming?
+Artificial Intelligence (AI) is when machines, especially computers, are designed to think and act like humans. AI helps machines learn from information, solve problems, and improve themselves. It allows them to do tasks that usually need human intelligence, like understand3ing what they see (like recognizing images), understanding and responding to speech, making decisions, and translating languages.
+
+Differences from Traditional Programming:
+
+Rule-based vs. Learning-based: Traditional programming involves explicitly coding rules and logic. AI, particularly machine learning, allows systems to learn patterns and rules from data.
+Adaptability: AI systems can adapt and improve over time with more data. Traditional programs remain static unless manually updated.
+Complex Problem Solving: AI can handle more complex and unstructured problems, while traditional programming is more suited for structured, well-defined tasks.
+2. What are the main branches of AI?
+The main branches of AI are as follows :
+
+Machine Learning (ML): Algorithms that enable computers to learn from and make predictions based on data.
+Natural Language Processing (NLP): The interaction between computers and humans through natural language.
+Robotics: Designing and building robots that can perform tasks autonomously or semi-autonomously.
+Computer Vision: Enabling computers to interpret and make decisions based on visual data.
+Expert Systems: AI programs that simulate the judgment and behavior of a human or an organization with expert knowledge.
+Speech Recognition: Converting spoken language into text.
+Planning and Scheduling: Algorithms for planning and optimizing tasks and resources.
+3. What is the difference between a strong AI and a weak AI?
+Difference between a strong AI and a weak AI is as follows :
+
+Strong AI (Artificial General Intelligence): Refers to machines with the ability to apply intelligence to any problem, rather than just specific ones. Strong AI systems can perform any intellectual task that a human can.
+Weak AI (Narrow AI): Focused on performing a specific task or a narrow range of tasks. These systems are designed to handle only particular problems and do not possess general intelligence.
+4. What is the difference between symbolic and connectionist AI?
+The difference between symbolic and connectionist AI is as follows:
+
+Symbolic AI: Uses explicit rules and logic to represent knowledge and solve problems. It relies on symbolic representation of knowledge, such as logic and rules.
+Connectionist AI: Uses neural networks to simulate the human brain's interconnected neuron structure. Learning happens through the adjustment of weights between neurons based on input data.
+5. What is the difference between parametric and non-parametric models?
+The difference between parametric and non-parametric models are as follows:
+
+Parametric Models: Have a fixed number of parameters. Examples include linear regression and logistic regression. These models make assumptions about the data distribution.
+Non-Parametric Models: Do not assume a specific form for the data distribution and can have a flexible number of parameters. Examples include k-nearest neighbors (KNN) and decision trees. They can adapt to the complexity of the data.
+6. What are the steps involved in deploying a machine learning model into production?
+The steps involved in deploying a Machine learning Model into production typically includes:
+
+Preprocessing data and training the model.
+Evaluating model performance.
+Containerizing the model using tools like Docker.
+Deploying on platforms like AWS, GCP, or Azure.
+Monitoring and maintaining the model to ensure performance and scalability
+7. What are the techniques used to avoid overfitting?
+The techniques used to avoid overfitting are as follows:
+
+Regularization: Adding a penalty for larger coefficients in the model (e.g., L1 and L2 regularization).
+Early Stopping: Halting the training process before the model becomes too complex.
+Dropout: Randomly dropping units (along with their connections) from the neural network during training to prevent co-adaptation.
+Data Augmentation: Increasing the amount of training data by generating new samples through transformations.
+8. What is the difference between batch learning and online learning?
+The difference between batch learning and online learning are as follows
+
+Batch Learning: In batch learning, the model is trained using the whole dataset all at once. This means you need all the data ready before starting the training. It’s usually used when the model doesn’t need to be updated very often and can be retrained after some time.
+
+Online Learning: In online learning, the model is trained little by little as new data comes in. It’s great for situations where data is constantly being generated, like in real-time systems, so the model keeps improving with every new piece of data.
+
+9. What is the difference between eigenvalues and eigenvectors?
+The difference between eigenvalues and eigenvectors are as follows:
+
+Eigenvalues: Scalars that indicate the magnitude by which the corresponding eigenvector is scaled during a linear transformation.
+Eigenvectors: Non-zero vectors that only change by a scalar factor when a linear transformation is applied. They represent the direction in which the transformation acts.
+10. What are the different platforms for Artificial Intelligence (AI) development?
+TensorFlow: An open-source machine learning framework developed by Google.
+PyTorch: An open-source machine learning library developed by Facebook, known for its flexibility and ease of use.
+Keras: A high-level neural networks API that can run on top of TensorFlow, Theano, or CNTK.
+Microsoft Azure AI: A suite of AI services and tools offered by Microsoft.
+Google Cloud AI: AI and machine learning services provided by Google Cloud.
+IBM Watson: A suite of AI tools and applications developed by IBM.
+Amazon SageMaker: A fully managed service by AWS for building, training, and deploying machine learning models.
+H2O.ai: An open-source platform for AI and machine learning.
+RapidMiner: A data science platform that provides an integrated environment for data preparation, machine learning, deep learning, and predictive analytics.
+11. Explain Diffusion Model architecture.
+Diffusion models are generative models that iteratively transform simple noise distributions into complex data distributions.
+
+Key components include:
+
+Forward Process: Gradually adds noise to the data over several steps, leading to a noise distribution.
+Reverse Process: Learns to reverse the noise addition process, progressively denoising the data to generate new samples.
+The model is trained to predict the noise added at each step, enabling it to generate realistic data by reversing the diffusion process. Diffusion models have shown impressive results in image and audio generation tasks.
+
+12. Explain the different agents in Artificial Intelligence.
+Artificial Intelligence (AI) agents can be classified into several types based on their capabilities and the complexity of their decision-making processes:
+
+Simple Reflex Agents: These agents act solely on the current percept, ignoring the rest of the percept history. They use condition-action rules to decide actions.
+Model-Based Reflex Agents: These agents maintain an internal state that depends on the percept history and reflects some of the unobserved aspects of the current state.
+Goal-Based Agents: These agents act to achieve specific goals, considering future consequences of their actions. They use search and planning to decide the best actions.
+Utility-Based Agents: These agents choose actions based on a utility function that evaluates the desirability of different states. They aim to maximize their overall happiness or satisfaction.
+Learning Agents: These agents can learn from their experiences and adapt their behavior. They consist of four main components: the learning element, performance element, critic, and problem generator.
+13. What is a rational agent, and what is rationality?
+Rational Agent: A rational agent is an agent that acts to achieve the best possible outcome or, when there is uncertainty, the best expected outcome. Rationality is about making the right decisions based on the current information and expected future benefits.
+Rationality: Rationality refers to the quality of being based on or in accordance with reason or logic. In AI, an agent is considered rational if it consistently performs actions that maximize its performance measure, given its percept sequence and built-in knowledge.
+14. How do coordination mechanisms impact agents in multiagent environments?
+Coordination mechanisms are essential in multiagent environments to manage the interactions between agents. These mechanisms ensure that agents work together harmoniously, avoiding conflicts and enhancing collective performance. Common coordination mechanisms include:
+
+Communication Protocols: Methods for agents to exchange information and negotiate actions.
+Distributed Planning: Techniques that enable agents to plan their actions considering others' plans.
+Market-Based Mechanisms: Economic models where agents bid for tasks or resources.
+Coordination Algorithms: Algorithms designed to optimize the joint performance of all agents.
+15. How does an agent formulate a problem?
+An agent formulates a problem by defining the following components:
+
+Initial State: The starting point or condition of the problem.
+Actions: The set of possible actions the agent can take.
+Transition Model: The description of what each action does, i.e., the outcome of applying an action to a state.
+Goal State: The desired outcome or condition the agent aims to achieve.
+Path Cost: A function that assigns a cost to each path or sequence of actions.
+To learn more refer to: How does an agent formulate a problem?
+
+16. What are the different types of search algorithms used in problem-solving?
+Search algorithms are categorized into:
+
+Uninformed Search Algorithms: These algorithms have no additional information about states beyond the problem definition. Examples include:
+Breadth-First Search (BFS)
+Depth-First Search (DFS)
+Uniform Cost Search
+Iterative Deepening Search
+Informed Search Algorithms: These algorithms use heuristics to estimate the cost of reaching the goal from a given state. Examples include:
+A* Search
+Greedy Best-First Search
+Beam Search
+To learn more refer to: Search Algorithms in AI
+
+17. What is the difference between informed and uninformed search AI algorithms?
+The key difference between informed and uninformed search AI algorithms is as follows:
+
+Uninformed Search Algorithms: These algorithms do not have any domain-specific knowledge beyond the problem definition. They search through the problem space blindly, exploring all possible states.
+Informed Search Algorithms: These algorithms use heuristics, which provide additional information to guide the search more efficiently towards the goal. They can often find solutions faster and more efficiently than uninformed search algorithms.
+18. What is the role of heuristics in local search algorithms?
+Heuristics play a critical role in local search algorithms by providing a way to estimate how close a given state is to the goal state. This guidance helps the algorithm to make more informed decisions about which neighboring state to explore next, improving the efficiency and effectiveness of the search process.
+
+19. What is Fuzzy Logic?
+Fuzzy Logic is a type of logic that deals with "in-between" values instead of just "true" or "false." It’s like saying something is "partly true" or "kind of false," making it useful for handling uncertain or vague information, like deciding if it’s "warm" or "cold" when the temperature is neither fully hot nor fully cold.
+
+Screenshot-2025-01-02-120010
+20. What Is Game Theory?
+Game Theory is a branch of mathematics and economics that studies strategic interactions between rational decision-makers. It provides tools to analyze situations where multiple agents make decisions that affect each other's outcomes. Game theory concepts are used to model and predict behaviors in competitive and cooperative scenarios.
+
+21. What is Reinforcement Learning, and explain the key components of a Reinforcement Learning problem?
+Reinforcement Learning (RL) is a type of machine learning where an agent learns to make decisions by taking actions in an environment to maximize cumulative rewards. The key components of an RL problem include:
+
+Agent: The learner or decision-maker.
+Environment: The external system with which the agent interacts.
+State: A representation of the current situation of the agent.
+Actions: The set of all possible moves the agent can make.
+Reward: A scalar feedback signal indicating the success of an action.
+Policy: A strategy that defines the agent's behavior by mapping states to actions.
+Value Function: A function that estimates the expected cumulative reward for each state or state-action pair.
+22. What strategies do you use to optimize AI models for performance in production?
+Model Quantization: Reducing the precision of model weights (e.g., from 32-bit to 8-bit) to decrease size and improve inference speed.
+Pruning: Removing less important parts of the model (e.g., redundant neurons or weights) to reduce complexity and size.
+Hardware Acceleration: Utilizing GPUs, TPUs, or specialized AI chips to speed up computations.
+Model Caching: Storing frequently used results to avoid repeated computations.
+Monitoring and Retraining: Continuously monitoring model performance and retraining if performance declines due to data drift.
+23. What are the different components of an expert system?
+An expert system consists of several key components:
+
+Knowledge Base: A repository of domain-specific knowledge, including facts and rules.
+Inference Engine: The component that applies logical rules to the knowledge base to deduce new information and make decisions.
+User Interface: The means through which users interact with the expert system.
+Explanation Facility: Provides explanations of the reasoning process and the conclusions reached.
+Knowledge Acquisition Module: Tools and techniques used to gather and update the knowledge base.
+24. What are embeddings in machine learning?
+Embeddings in machine learning are representations of objects, such as words or images, in a continuous vector space. These vectors capture semantic relationships and similarities between the objects. For example, in natural language processing, word embeddings map words to high-dimensional vectors that reflect their meanings and relationships based on their usage in large text corpora.
+
+25. How does reward maximization work in Reinforcement Learning?
+In Reinforcement Learning, reward maximization involves the agent taking actions that maximize its cumulative reward over time. The agent uses a policy to select actions based on the expected future rewards. The learning process involves updating the value function and policy to improve the expected rewards, typically using algorithms like Q-learning, SARSA, or policy gradient methods.
+
+26. What is gradient descent in machine learning?
+Gradient Descent is an optimization algorithm used to minimize the loss function in machine learning models. It iteratively adjusts the model parameters in the opposite direction of the gradient of the loss function with respect to the parameters. The step size is determined by the learning rate.
+
+Gradient descent variants include:
+
+Batch Gradient Descent: Uses the entire dataset to compute the gradient.
+Stochastic Gradient Descent (SGD): Uses one sample at a time to compute the gradient.
+Mini-Batch Gradient Descent: Uses a small batch of samples to compute the gradient.
+27. What is the difference between genetic algorithms and local search optimization algorithms?
+The difference between genetic algorithms and local search optimization algorithms are as follows:
+
+Genetic Algorithms (GAs): These are population-based optimization algorithms inspired by the process of natural selection. They use operators like selection, crossover, and mutation to evolve a population of solutions over generations.
+Local Search Algorithms: These algorithms explore the solution space by moving from one solution to a neighboring solution, typically focusing on improving a single solution at a time. Examples include hill climbing and simulated annealing.
+28. Discuss the concept of local optima and how it influences the effectiveness of local search algorithms.
+Local optima are solutions that are better than all their neighboring solutions but may not be the best overall solution (global optimum). Local search algorithms can get stuck in local optima, leading to suboptimal solutions. Techniques like simulated annealing and genetic algorithms are used to mitigate this issue by allowing occasional moves to worse solutions, helping the search escape local optima.
+
+29. What is the difference between propositional logic and first-order logic, and how are they used in knowledge representation?
+The Key difference between propositional logic and first-order logic are as follows:
+Propositional Logic: Deals with propositions that can either be true or false. It uses logical connectives like AND, OR, and NOT to build complex statements.
+First-Order Logic (FOL): Extends propositional logic by including quantifiers and predicates that can express relationships between objects. FOL is more expressive and can represent more complex statements about the world.
+In knowledge representation, propositional logic is used for simple, straightforward scenarios, while first-order logic is used for more complex representations involving objects and their relationships.
+
+30. Discuss the trade-offs between exploration and exploitation in local search algorithms.
+In local search algorithms, exploration refers to the process of trying out new, possibly suboptimal solutions to discover better ones. Exploitation involves refining current solutions to improve them. The trade-off involves balancing the two: too much exploitation can lead to getting stuck in local optima, while too much exploration can waste resources and time. Effective algorithms balance both to find optimal solutions efficiently.
+
+31. What are the differences between the hill climbing and simulated annealing algorithms?
+The key differences between the hill climbing and simulated annealing algorithms are as follows:
+
+Hill Climbing: A local search algorithm that continuously moves towards better neighboring solutions. It can easily get stuck in local optima because it only considers immediate improvements.
+Simulated Annealing: A probabilistic algorithm that explores the solution space more broadly. It uses a temperature parameter to occasionally accept worse solutions, helping to escape local optima and potentially find the global optimum.
+32. Explain the concept of a knowledge base in AI and discuss its role in intelligent systems.
+A knowledge base in AI is a centralized repository of information, including facts, rules, and relationships about a particular domain. It enables intelligent systems to reason, make decisions, and solve problems by applying inference mechanisms to the stored knowledge. The knowledge base is crucial for expert systems, decision support systems, and other AI applications that rely on domain-specific information.
+
+33. How do knowledge representation and reasoning techniques support intelligent systems?
+Knowledge representation and reasoning techniques provide the means to encode information about the world and manipulate it to derive new information, make decisions, and solve problems. They support intelligent systems by enabling:
+
+Symbolic Representation: Capturing complex relationships and entities in a structured form.
+Logical Reasoning: Applying rules and logic to infer new knowledge and make decisions.
+Semantic Understanding: Interpreting the meaning of information to provide contextually relevant responses.
+34. State the differences between model-free and model-based Reinforcement Learning.
+Model-Free Reinforcement Learning: The agent learns to make decisions based solely on the rewards received from the environment. It does not build a model of the environment's dynamics. Examples include Q-learning and SARSA.
+Model-Based Reinforcement Learning: The agent builds a model of the environment's dynamics and uses it to predict future states and rewards. It allows for planning and more efficient learning. Examples include Dyna-Q and Monte Carlo Tree Search.
+35. What is Generative AI? What are some popular Generative AI architectures?
+Generative AI refers to models that can generate new, original content based on the data they were trained on. These models can create text, images, music, and other media. Popular generative AI architectures include:
+
+Generative Adversarial Networks (GANs): Consist of a generator and a discriminator that compete to produce realistic data.
+Variational Autoencoders (VAEs): Use probabilistic methods to generate new data points similar to the training data.
+Transformer Models: Such as GPT-3 and DALL-E, which are capable of generating coherent text and images based on given prompts.
+36. What are the key differences between zero-sum and non-zero-sum games?
+Zero-Sum Games: In these games, one person’s win means another person’s loss. The total amount of gains and losses always adds up to zero. For example, in chess or poker, if one player wins, the other loses by the same amount.
+Non-Zero-Sum Games: In these games, everyone’s outcome is not connected like a seesaw. All players can either win or lose together, depending on how they play. For example, in trade negotiations, both sides can benefit if they cooperate, or both can lose if they don’t agree. Similarly, in the Prisoner’s Dilemma, players can choose to help each other and gain, or betray and lose.
+37. What is the concept of constraint satisfaction problem (CSP)?
+A Constraint Satisfaction Problem (CSP) is a mathematical problem defined by a set of variables, a domain of possible values for each variable, and a set of constraints specifying allowable combinations of values. The goal is to find a complete assignment of values to variables that satisfies all constraints. CSPs are used in scheduling, planning, and resource allocation problems.
+
+38. What do you mean by inference in AI?
+Inference in AI refers to the process of deriving new knowledge or conclusions from existing information using logical reasoning. It involves applying rules and algorithms to known data to infer new facts, make predictions, or solve problems. Inference is a key component of expert systems, decision-making processes, and machine learning models.
+
+39. What are the advantages and disadvantages of forward chaining and backward chaining inference in rule-based systems?
+The advantages and disadvantages of forward chaining and backward chaining inference in rule-based systems are as follows:
+
+Forward Chaining:
+
+Advantages: Efficient for problems where all data is available from the start. Suitable for data-driven scenarios.
+Disadvantages: Can generate a large number of intermediate facts, leading to inefficiency.
+Backward Chaining:
+
+Advantages: Goal-directed, focusing on relevant data and rules. Efficient for goal-driven scenarios.
+Disadvantages: Can be inefficient if the search space is large or if there are many possible rules to apply.
+40. How do Bayesian networks model probabilistic relationships between variables?
+Bayesian networks model probabilistic relationships using a directed acyclic graph (DAG) where nodes represent random variables, and edges represent conditional dependencies. Each node has a probability distribution that quantifies the effect of its parents. Bayesian networks allow for efficient representation and computation of joint probabilities, enabling reasoning under uncertainty and probabilistic inference.
+
+41. What are the key differences between Q-learning and SARSA?
+The key differences between Q-learning and SARSA are as follows
+
+1. Q-learning
+
+Type: Off-policy learning algorithm.
+Update Rule: Uses the maximum possible reward of the next state (greedy policy) for updates.
+Exploration: Does not depend on the current policy being followed; can explore different actions.
+Formula: 
+Q
+(
+s
+,
+a
+)
+←
+Q
+(
+s
+,
+a
+)
++
+α
+[
+r
++
+γ
+max
+⁡
+a
+′
+Q
+(
+s
+′
+,
+a
+′
+)
+−
+Q
+(
+s
+,
+a
+)
+]
+Q(s,a)←Q(s,a)+α[r+γmax 
+a 
+′
+ 
+​
+ Q(s 
+′
+ ,a 
+′
+ )−Q(s,a)]
+2. SARSA (State-Action-Reward-State-Action)
+
+Type: On-policy learning algorithm.
+Update Rule: Uses the actual reward of the next action taken (current policy) for updates.
+Exploration: Follows the current policy, considering exploration during updates.
+Formula: 
+Q
+(
+s
+,
+a
+)
+←
+Q
+(
+s
+,
+a
+)
++
+α
+[
+r
++
+γ
+Q
+(
+s
+′
+,
+a
+′
+)
+−
+Q
+(
+s
+,
+a
+)
+]
+Q(s,a)←Q(s,a)+α[r+γQ(s 
+′
+ ,a 
+′
+ )−Q(s,a)]
+42. Discuss the concept of alpha-beta pruning in adversarial search algorithms.
+Alpha-beta pruning is an optimization technique for the minimax algorithm in adversarial search (e.g., game playing). It eliminates branches in the search tree that cannot affect the final decision, thus reducing the number of nodes evaluated.
+
+Alpha (α): The best value that the maximizer currently can guarantee at that level or above.
+Beta (β): The best value that the minimizer currently can guarantee at that level or below.
+During the search, branches are pruned if:
+
+Maximizer: Finds a move that is better than the current beta value (beta cut-off).
+Minimizer: Finds a move that is worse than the current alpha value (alpha cut-off).
+43. Explain the concept of backtracking search and its role in finding solutions to CSPs.
+Backtracking search is a depth-first search algorithm for solving Constraint Satisfaction Problems (CSPs). It incrementally builds candidates for the solutions and abandons a candidate ("backtracks") as soon as it determines that the candidate cannot possibly be completed to a valid solution.
+
+Role in CSPs: Backtracking is used to systematically explore the possible assignments of values to variables while ensuring that the constraints are satisfied. If a partial assignment violates a constraint, the algorithm backtracks to the previous step to try a different value.
+44. Explain the role of the minimax algorithm in adversarial search for optimal decision-making.
+The minimax algorithm is used in decision-making for two-player games, where one player (maximizer) tries to maximize their score while the other player (minimizer) tries to minimize it. The algorithm evaluates the game tree, considering all possible moves:
+
+Maximizer's Turn: Chooses the move with the highest score.
+Minimizer's Turn: Chooses the move with the lowest score.
+The goal is to find the optimal strategy by assuming that both players play optimally. The minimax algorithm recursively evaluates the game tree until the terminal nodes, assigning values to each move and choosing the best move for the current player.
+
+45. Explain the A* algorithm and its heuristic search strategy.
+A* algorithm is used to find the shortest path in a graph. It uses both the actual cost to reach a node (g(n)) and a heuristic estimate of the cost to reach the goal from that node (h(n)).
+
+Formula: f(n)=g(n)+h(n)
+Heuristic: A function that estimates the cost of reaching the goal from the current node. It guides the search process by prioritizing nodes with the lowest estimated total cost (f(n)).
+A* efficiently finds the shortest path by balancing exploration of new nodes (guided by the heuristic) and exploitation of known paths (guided by the actual cost).
+
+46. Explain the concept of the Markov Decision Process (MDP) and its relevance to Reinforcement Learning.
+Markov Decision Process (MDP) is a mathematical framework for modeling decision-making in environments with stochastic outcomes. It consists of:
+
+States (S): The possible situations in the environment.
+Actions (A): The set of all possible actions the agent can take.
+Transition Model (P): The probability of moving from one state to another, given an action.
+Rewards (R): The immediate reward received after transitioning from one state to another.
+Policy (π): A strategy that specifies the action to take in each state.
+In Reinforcement Learning, MDPs provide the foundation for defining the environment, modeling the agent's interactions, and optimizing the policy to maximize cumulative rewards.
+
+47. Explain the Hidden Markov Model.
+Hidden Markov Model (HMM) is a statistical model used to represent systems that have hidden (unobservable) states. It consists of:
+
+States: A set of hidden states the system can be in.
+Observations: The observed data, which are probabilistically related to the hidden states.
+Transition Probabilities: The probabilities of transitioning between hidden states.
+Emission Probabilities: The probabilities of observing a certain output given a hidden state.
+Initial Probabilities: The probabilities of starting in each hidden state.
+HMMs are used in various applications like speech recognition, natural language processing, and bioinformatics to model sequences with underlying hidden patterns.
+
+48. Explain the concept of autoencoders in deep learning.
+Autoencoders are a type of neural network used for unsupervised learning, specifically for dimensionality reduction and feature learning. They consist of two main parts:
+
+Encoder: Maps the input data to a lower-dimensional latent space.
+Decoder: Reconstructs the input data from the latent representation.
+The goal is to train the network so that the output closely matches the input, forcing the model to learn efficient representations of the data. Variants like denoising autoencoders and variational autoencoders add additional constraints or probabilistic elements to improve robustness and generative capabilities.
+
+49. Explain Generative Adversarial Networks (GANs) architecture.
+Generative Adversarial Networks (GANs) consist of two neural networks, a generator and a discriminator, that compete in a zero-sum game:
+
+Generator: Creates fake data resembling the real data.
+Discriminator: Distinguishes between real and fake data.
+A GAN works like a game between a fake image creator (generator) and a fake image detector (discriminator). The creator tries to make fake images look real, while the detector tries to tell real images from fake ones. They improve together, and over time, the creator becomes so good that the detector can't tell the difference between real and fake images.
+
+50. Explain Transformer Model architecture.
+Transformer model was introduced in the paper "Attention is All You Need," revolutionized natural language processing with its attention mechanisms and parallel processing capabilities.
+
+Key components include:
+
+Self-Attention Mechanism: Allows each input token to attend to all other tokens, capturing long-range dependencies.
+Positional Encoding: Adds information about the position of tokens in the sequence.
+Encoder-Decoder Structure:
+Encoder: Consists of multiple layers, each with self-attention and feed-forward neural networks.
+Decoder: Similar to the encoder but includes an additional attention layer to attend to the encoder's output.
+Transformers enable efficient training on large datasets and achieve state-of-the-art performance in tasks like machine translation and text generation
